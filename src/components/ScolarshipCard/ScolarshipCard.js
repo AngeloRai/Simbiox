@@ -15,7 +15,7 @@ function CardFuncionario({ scholarship, i }) {
         <div className="mb-3 d-flex justify-content-center">
           <img
             src={scholarship.university.logo_url}
-            alt="foto funcionario"
+            alt="logo universidade"
             style={{ maxHeight: "9rem" }}
           />
         </div>
