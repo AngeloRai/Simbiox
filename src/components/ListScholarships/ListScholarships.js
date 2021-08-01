@@ -22,12 +22,12 @@ function ListScholarships() {
       setLoading(true);
       const fetchedScholarships = await api.get("/scholarships");
       setScholarships([fetchedScholarships.data]);
-      console.log(fetchedScholarships.data);
+      
       setLoading(false);
     };
     fetchScolarships();
   }, []);
-  console.log(scholarships);
+  
 
   //Generate filtered data
   const filteredList = data
@@ -59,13 +59,13 @@ function ListScholarships() {
         )
     );
 
-  console.log(filteredList);
+  
 
   // Get current scholarships
   const indexOfLastScholarship = currentPage * scholarshipsPerPage;
   const indexOfFirstScholarship = indexOfLastScholarship - scholarshipsPerPage;
 
-  let currentScholarships = data.slice(
+  let currentScholarships = filteredList.slice(
     indexOfFirstScholarship,
     indexOfLastScholarship
   );
@@ -76,7 +76,7 @@ function ListScholarships() {
   if (loading) {
     return <h2>Loading...</h2>;
   }
-  console.log(searchState);
+  
   return (
     <div className="main-scholarship-container">
       <SerachFilterInput setSearchState={setSearchState} />
