@@ -10,10 +10,11 @@ function ConfirmationModal(props) {
         <Container>
           <Row>
             <Col centered="true" md={12} lg={5}>
-              {/* image url is not working, this downloaded image is being used instead */}
+              {/* image url is not working because http requests are accepted by entlify security (only https)
+           this downloaded image is being used instead */}
               <img
                 src={logo}
-                alt="foto funcionario"
+                alt="logo universidade"
                 style={{ maxWidth: "16rem" }}
                 className="detail-logo"
               />

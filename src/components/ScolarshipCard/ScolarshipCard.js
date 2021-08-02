@@ -3,7 +3,7 @@ import "./ScolarshipCard.css";
 import DetailModal from "../DetailModal/DetailModal";
 import logo from '../../images/logo-unip.jpeg'
 
-function CardFuncionario({ scholarship, i }) {
+function ScholarshipCard({ scholarship, i }) {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -14,7 +14,8 @@ function CardFuncionario({ scholarship, i }) {
     >
       <div className="card-body">
         <div className="mb-3 d-flex justify-content-center">
-          {/* image url is not working, this downloaded image is being used instead */}
+          {/* image url is not working because http requests are accepted by entlify security (only https)
+           this downloaded image is being used instead */}
           <img
             src={logo}
             alt="logo universidade"
@@ -62,4 +63,4 @@ function CardFuncionario({ scholarship, i }) {
   );
 }
 
-export default CardFuncionario;
+export default ScholarshipCard;
