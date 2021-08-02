@@ -28,20 +28,20 @@ function ConfirmationModal(props) {
 
           <Row>
             <Col className="border-right p-1 " md={12} lg={6}>
-              <div className="d-flex justify-content-center my-2">
+              <div className="info-text d-flex justify-content-center my-2">
                 Universidade:&nbsp;{" "}
                 <strong>{props.data.university.name}</strong> &nbsp;/ Nota:
                 &nbsp;<strong> {props.data.university.score}</strong>
               </div>
             </Col>
             <Col className=" p-1 " md={12} lg={6}>
-              <div className="d-flex justify-content-center my-2">
+              <div className="info-text d-flex justify-content-center my-2">
                 Campus: &nbsp;<strong>{props.data.campus.name}</strong> &nbsp;/
                 Cidade:&nbsp;
                 <strong>{props.data.campus.city}</strong>
               </div>
             </Col>
-            <Col className="border py-2 my-2" md={12} lg={12}>
+            <Col className="info-text border py-2 my-2" md={12} lg={12}>
               Preço:{" "}
               <strong>
                 {props.data.full_price.toLocaleString("pt-BR", {
