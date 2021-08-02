@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ScolarshipCard.css";
 import DetailModal from "../DetailModal/DetailModal";
+import logo from '../../images/logo-unip.jpeg'
 
 function CardFuncionario({ scholarship, i }) {
   const [showModal, setShowModal] = useState(false);
@@ -13,8 +14,9 @@ function CardFuncionario({ scholarship, i }) {
     >
       <div className="card-body">
         <div className="mb-3 d-flex justify-content-center">
+          {/* image url is not working, this downloaded image is being used instead */}
           <img
-            src={scholarship.university.logo_url}
+            src={logo}
             alt="logo universidade"
             style={{ maxHeight: "9rem" }}
           />

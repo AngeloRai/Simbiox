@@ -1,6 +1,7 @@
 import React from "react";
 import { Modal, Container, Row, Col } from "react-bootstrap";
 import "./DetailModal.css";
+import logo from "../../images/logo-unip.jpeg";
 
 function ConfirmationModal(props) {
   return (
@@ -9,8 +10,9 @@ function ConfirmationModal(props) {
         <Container>
           <Row>
             <Col centered md={12} lg={5}>
+              {/* image url is not working, this downloaded image is being used instead */}
               <img
-                src={props.data.university.logo_url}
+                src={logo}
                 alt="foto funcionario"
                 style={{ maxWidth: "16rem" }}
                 className="detail-logo"
@@ -27,13 +29,15 @@ function ConfirmationModal(props) {
           <Row>
             <Col className="border-right p-1 " md={12} lg={6}>
               <div className="d-flex justify-content-center my-2">
-                Universidade:&nbsp; <strong>{props.data.university.name}</strong> &nbsp;/
-                Nota: &nbsp;<strong > {props.data.university.score}</strong>
+                Universidade:&nbsp;{" "}
+                <strong>{props.data.university.name}</strong> &nbsp;/ Nota:
+                &nbsp;<strong> {props.data.university.score}</strong>
               </div>
             </Col>
             <Col className=" p-1 " md={12} lg={6}>
               <div className="d-flex justify-content-center my-2">
-                Campus: &nbsp;<strong>{props.data.campus.name}</strong> &nbsp;/ Cidade:&nbsp;
+                Campus: &nbsp;<strong>{props.data.campus.name}</strong> &nbsp;/
+                Cidade:&nbsp;
                 <strong>{props.data.campus.city}</strong>
               </div>
             </Col>
