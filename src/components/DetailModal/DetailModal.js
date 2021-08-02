@@ -9,7 +9,7 @@ function ConfirmationModal(props) {
       <Modal.Body>
         <Container>
           <Row>
-            <Col centered md={12} lg={5}>
+            <Col centered="true" md={12} lg={5}>
               {/* image url is not working, this downloaded image is being used instead */}
               <img
                 src={logo}
